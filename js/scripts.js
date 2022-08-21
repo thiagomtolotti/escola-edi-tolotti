@@ -183,7 +183,6 @@ window.mobileCheck = function() {
   return check;
 };
 
-
 function whatsappWeb(){
 	if(!window.mobileCheck()){
 		let links = document.querySelectorAll("a")
