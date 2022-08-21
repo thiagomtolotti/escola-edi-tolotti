@@ -1,0 +1,274 @@
+:root{
+  --preto: #1e1e1e;
+  --branco: #f7f7f7;
+  --amarelo: #f7c325;
+}
+
+*{
+  margin: 0;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+  font-size: 2.6vh;
+  line-height: 3.2vh;
+
+}
+
+html, body{
+  height: 100%;
+  height: -webkit-fill-available;
+
+  overscroll-behavior-y: contain;
+}
+
+body{
+  width: 100%;
+
+  overflow-x: hidden;
+}
+
+section{
+  width: 100vw;
+  height: 100%;
+  height: -webkit-fill-available;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding-bottom: 110px;
+  
+  overflow: hidden;
+}
+
+section *{
+  margin: 0 20px;
+}
+
+h3{
+  font-size: 3vh;
+  line-height: 3.3vh;
+}
+
+.destaque{
+  font-size: 4.5vh;
+  line-height: 5vh;
+
+  font-weight: bold;
+}
+
+.img-cont{
+  display: flex;
+
+  max-height: 50%;
+  overflow: hidden;
+}
+
+.img-cont img{
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+
+  flex-shrink: 0;
+}
+
+.icone{
+  max-height: 22%;
+  margin-top: 8vh;
+}
+
+.deslocado{
+  padding-left: 1.5em;
+  text-indent:-1.5em;
+}
+
+.slide-carousel{
+  max-height: 50vh;
+  max-width: 50vh;
+}
+
+.slide-slider{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+	transition: all 0.5s;
+}
+
+.slide-carousel{
+  order: -1;
+  align-self: center;
+}
+
+.slide-carousel img{
+  width: 100%;
+  height: 100%;
+}
+
+#hero{
+  background-color: var(--preto);
+  color: var(--branco);
+
+  justify-content: space-around;
+}
+
+#hero h3{
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+#img-final, #texto-cta-pc{
+  display: none;
+}
+
+#texto-int{
+  position: absolute;
+  opacity: 0;
+  top: 100vh;
+
+
+  margin: auto 30px;
+}
+
+#texto-int *{
+  margin: 0;
+}
+
+#texto-int ul{
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+
+  margin-top: 20px;
+  margin-left: -5%;
+
+  width: 102%;
+}
+
+#texto-int ul li{
+  margin: 5px 10px 5px 0;
+}
+
+
+#cta{
+  position: fixed;
+  bottom: 35px;
+  width: 75vw;
+
+  left: 50%;
+  margin-left: -37.5vw;
+
+  display: flex;
+}
+
+#cta, #cta *{
+  transition: .5s;
+}
+
+#cta-btn{
+  line-height: 55px;
+  width: 100%;
+
+  background-color: var(--amarelo);
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 3.5vh;
+  color: var(--preto);
+  border: 2px solid transparent;
+}
+
+#vantagens{
+  background-color: var(--branco);
+}
+
+#vantagens ul{
+  padding-left: 20px;
+  margin: auto;
+}
+
+#vantagens ul li{
+  margin: 2vh 20px;
+}
+
+#professores{
+  background-color: var(--amarelo);
+}
+
+#texto-professores{
+  margin-top: 5vh;
+}
+
+#professores p{
+  margin-top: 30px;
+}
+
+#horarios{
+  background-color: var(--branco);
+
+  text-align: center;
+}
+
+#horarios > *{
+  margin-top: 8vh;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.horario{
+  margin-top: 3vh;
+}
+
+.horario > *{
+  margin: 0;
+}
+
+.horario h4{
+  font-weight: bold;
+}
+
+#final{
+  background-color: var(--preto);
+  color: var(--branco);
+
+  height: 70vh;
+}
+
+#texto-final{
+  margin-top: 15vh;
+}
+
+#texto-final p{
+  margin: 3vh 40px auto 40px;
+}
+
+[data-animate], [data-animateTexto]{
+  transition: 1s;
+}
+
+[data-animate = "fadeOut"].animate{
+  transform: translate3d(0,-100%,0);
+  opacity: 0;
+}
+
+[data-animate = "up"].animate{
+  transform: translate3d(0,-42vh,0);
+}
+
+[data-animate = "fadeIn"].animate{
+  transform: translate3d(0,-70vh,0);
+  opacity: 1 !important;
+}
+
+[data-animateTexto = "left"]{
+  transform: translate3d(-150%,0,0);
+}
+
+[data-animateTexto = "right"]{
+  transform: translate3d(150%,0,0);
+}
+
+[data-animateTexto].animate{
+  transform: translate3d(0,0,0);
+}
