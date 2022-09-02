@@ -343,3 +343,20 @@ setTimeout(function(e){
     }
     contrastCTA();
   },100);
+
+let imgs = ['microfone.webp', 'baixo.webp', 'saxofone.webp', 'guitarra.webp', 'teclado.webp'];
+let altImgs = ['aulas de técnica vocal em Curitiba','aulas de baixo em Curitiba','aulas de saxofone em Curitiba','aulas de guitarra em Curitiba','aulas de piano em Curitiba']
+
+document.querySelectorAll('.slide-carousel .slide-slider').forEach((carrossel)=>{
+	imgs.forEach((img, i)=>{
+		let imgEl = document.createElement('img')
+		imgEl.src = `img/${img}`
+		imgEl.alt = `${altImgs[i]}`
+
+		imgEl.classList.add("mySlides")
+		imgEl.style.marginRight = "20px"
+		
+		console.log(carrossel)
+		carrossel.insertAdjacentElement("beforeend", imgEl);
+	})
+})
